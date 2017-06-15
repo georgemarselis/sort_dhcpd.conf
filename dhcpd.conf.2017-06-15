@@ -32,8 +32,8 @@ subnet 192.168.8.0 netmask 255.255.255.0 {
 		fixed-address 192.168.8.12;
 	}
 
-	host dymolabelpc { 	# lab PC for Eshrats Dymo equipment
-						# swapped 00:19:b9:0f:da:6a (old Optiplex 620) with 00:25:64:c6:f4:aa (new Optiplex 780)
+	host dymolabelpc { # lab PC for Eshrats Dymo equipment
+			   # swapped 00:19:b9:0f:da:6a (old Optiplex 620) with 00:25:64:c6:f4:aa (new Optiplex 780)
 		hardware ethernet 00:25:64:c6:f4:aa;
 		fixed-address 192.168.8.13;
 	}
@@ -657,6 +657,11 @@ subnet 192.168.8.0 netmask 255.255.255.0 {
 	host oldincucyte { # see ticket 1788337, done by GangCheng on 16.04.2015
 		hardware ethernet 00:25:90:95:13:B8;
 		fixed-address 192.168.8.213;
+	}
+
+	host ncmmlap240-l { # RT 2571890
+		hardware ethernet 10:02:B5:4A:71:F2;
+		fixed-address 192.168.8.240;
 	}
 
 	host intbiolp1 {
