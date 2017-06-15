@@ -1,0 +1,677 @@
+# DHCP server configuration file for the Biotek internal network 192.168.8/24
+# Initial version by George Magklaras - Biotek IT - Dec 2007 
+
+ddns-update-style interim;
+authorative;
+
+subnet 192.168.8.0 netmask 255.255.255.0 {
+	option domain-name          "internal.biotek";
+	option subnet-mask          255.255.255.0;
+	option domain-name-servers  192.168.8.2, 192.168.8.4, 129.240.2.27, 129.240.2.40, 129.240.2.3;
+	option routers              192.168.8.2;
+	default-lease-time          1199600;
+	max-lease-time              1200000;
+
+	host idractest {
+		hardware ethernet 14:18:77:4B:49:75;
+		fixed-address 192.168.8.3;
+	}
+
+	host intcnkeeper {
+		hardware ethernet 52:54:00:b5:4e:96;
+		fixed-address 192.168.8.4;
+	}
+
+	host intbiotroll {
+		hardware ethernet 14:18:77:4B:49:72;
+		fixed-address 192.168.8.10;
+	}
+
+	host intbioweb {
+		hardware ethernet D4:AE:52:E8:D4:26;
+		fixed-address 192.168.8.12;
+	}
+
+	host dymolabelpc { 	# lab PC for Eshrats Dymo equipment
+						# swapped 00:19:b9:0f:da:6a (old Optiplex 620) with 00:25:64:c6:f4:aa (new Optiplex 780)
+		hardware ethernet 00:25:64:c6:f4:aa;
+		fixed-address 192.168.8.13;
+	}
+
+	host bioanalyzerpc { # lab PC for NCMM Judith Bioanalayzer equipment
+		hardware ethernet 98:90:96:b0:96:0d;
+		fixed-address 192.168.8.14;
+	}
+
+	host testpc { # replacing nilsenlabpc connected to internal netwok printer
+		hardware ethernet 00:1e:4f:a0:00:4b;
+		fixed-address 192.168.8.15;
+	}
+
+	host hts4 { # Older PC davidlabpc - biotek28 will be a backup Mac = 00:1c:c4:65:52:09
+		hardware ethernet 48:0f:cf:64:72:c2;
+		fixed-address 192.168.8.16;
+	}
+
+	host server1 { # George test VM pool at mencius
+		hardware ethernet 52:54:00:a7:e2:dc;
+		fixed-address 192.168.8.17;
+	}
+
+	host server2 { # George test VM pool at mencius
+		hardware ethernet 52:54:00:a7:e2:df;
+		fixed-address 192.168.8.18;
+	}
+
+	host centos7 { # George test VM pool at mencius
+		hardware ethernet 52:54:00:65:70:7e;
+		fixed-address 192.168.8.19;
+	}
+
+	host arxcarlos {
+		hardware ethernet 00:19:B9:11:D3:DD;
+		fixed-address 192.168.8.21;
+	}
+
+	host intperun {
+		option routers 129.240.235.1;
+		hardware ethernet 00:22:19:57:85:A6;
+		fixed-address 192.168.8.22;
+	}
+
+	host arxcontrol {
+		hardware ethernet 52:54:00:28:23:af;
+		fixed-address 192.168.8.23;
+	}
+
+	host microinjenctionPC {
+		hardware ethernet 00:19:B9:05:E8:A0;
+		fixed-address 192.168.8.24;
+	}
+
+	host carlospc { # Carlos desktop in internal network to access arx control vm
+		hardware ethernet 00:0a:f7:88:6e:5f;
+		fixed-address 192.168.8.25;
+	}
+
+	host irepworkstation { # irep workstation in the internal network
+		hardware ethernet 90:1b:0e:ac:84:15;
+		fixed-address 192.168.8.26;
+	}
+
+	host FellesIT-new-MacbookPro { # Felles IT NCMM new MacBook Pro 13"
+		hardware ethernet 0c:4d:e9:d5:68:3c;
+		fixed-address 192.168.8.27;
+	}
+
+	host aktasekulic {
+		#Nikolina Sekulic GE AKTA protein purification
+		hardware ethernet 48:0F:CF:42:9E:C3;
+		fixed-address 192.168.8.28;
+	}
+
+	host TestLaptop { # Testlatop
+		hardware ethernet 1c:75:08:c2:d5:c6;
+		fixed-address 192.168.8.29;
+	}
+
+	host chemicalwastepc { # PC for Liv - Ola - Eshrat in the former Berndt Theide lab 2nd floor
+		hardware ethernet 00:25:64:90:0e:0f;
+		fixed-address 192.168.8.30;
+	}
+
+	host mathelx201 {
+		hardware ethernet F0:DE:F1:44:CC:81;
+		fixed-address 192.168.8.31;
+	}
+
+	host cn2 {
+		hardware ethernet 00:19:B9:E0:D9:94;
+		fixed-address 192.168.8.32;
+	}
+
+	host iQuePC { # PC to be used with the iQue software - Chemical platform - Johannes
+		hardware ethernet 48:4d:7e:a1:40:48;
+		fixed-address 192.168.8.37;
+	}
+
+	host testsekulic {
+		hardware ethernet 90:b1:1c:75:4c:1f;
+		fixed-address 192.168.8.41;
+	}
+
+	host Dario-PC { # workstation for Dario,rt 2403975
+		hardware ethernet 18:66:da:31:1d:f1;
+		fixed-address 192.168.8.80;
+	}
+
+	host 4jane { # RT 2508841
+		hardware ethernet a8:20:66:1b:bc:13;
+		fixed-address 192.168.8.81;
+	}
+
+	host bioplexpcnew {
+		hardware ethernet b4:b5:2f:de:06:08;
+		fixed-address 192.168.8.82;
+	}
+
+	host newbiorad.internal.biotek { # RT 
+		hardware ethernet 00:30:18:c7:19:48;
+		fixed-address 192.168.8.83;
+	}
+
+	host intncmmbook190.internal.biotek { # put felles macbook to internal network for testing
+		hardware ethernet 40:6c:8f:23:9e:52;
+		fixed-address 192.168.8.84;
+	}
+
+	host envision-PC { # lap pc, see RT2438074
+		hardware ethernet  4c:cc:6a:7d:30:7b;
+		fixed-address 192.168.8.88;
+	}
+
+	host BDLSR-PC { # computer connected to BD LSRFortessa instrument, 3rd floor, in charge by Johannes 
+		hardware ethernet 00:13:3b:0f:b6:bc;
+		fixed-address 192.168.8.90;
+	}
+
+	host agilent-PC-sekulic { # lap pc, see rt 2446915
+		hardware ethernet  dc:4a:3e:80:42:dd;
+		fixed-address 192.168.8.91;
+	}
+
+	host chembio2 { # second chembio pc for Anne Jorun
+		hardware ethernet 34:17:eb:a8:6c:1f;
+		fixed-address 192.168.8.94; 
+	}
+
+	host ztr2 {
+		hardware ethernet 52:54:00:bc:69:f8;
+		fixed-address 192.168.8.95;
+	}
+
+	host lab-printer { # HP 551dn Color Prionter in the lab 2nd floor
+		hardware ethernet 9c:b6:54:19:b5:eb;
+		fixed-address 192.168.8.97;
+	}
+
+	host ncmmlap127-l { # NCMM HP laptop - to borrow
+		hardware ethernet 6c:3b:e5:8c:9d:ac;
+		fixed-address 192.168.8.98;
+	}
+
+	host kim-lab-pc { # win7 32 in the ncmm new cool room
+		hardware ethernet f8:b1:56:d8:4d:50;
+		fixed-address 192.168.8.99;
+	}
+
+	host biorad52161 { # xp machine in the lab room 52161 
+		hardware ethernet 00:0a:5e:04:ee:66;
+		fixed-address 192.168.8.100;
+	}
+
+	host intbiotekswitch1 {
+		hardware ethernet 00:1E:14:E6:24:C1;
+		fixed-address 192.168.8.101;
+	}
+
+	host intbiotekswitch2 {
+		hardware ethernet 00:1D:E6:CB:CD:C2;
+		fixed-address 192.168.8.102;
+	}
+
+	host intbiotekswitch3 {
+		hardware ethernet 00:1E:14:F0:DE:C1;
+		fixed-address 192.168.8.103;
+	}
+
+	host singer { # Sandra Lopez Avilles Lab 4th Floor
+		hardware ethernet 00:18:7D:1C:BA:10;
+		fixed-address 192.168.8.105;
+	}
+
+	host macbookmel {
+		hardware ethernet 00:17:f2:2a:f9:e3;
+		fixed-address 192.168.8.106;
+	}
+
+	host proxmox1 { # proxmox virtual platform by Gang
+		hardware ethernet bc:30:5b:b7:ff:4f;
+		fixed-address 192.168.8.110;
+	}
+
+	host sunzi { # test ubuntu machine by Gang 
+		hardware ethernet 00:21:9b:5a:cb:15;
+		fixed-address 192.168.8.111;
+	}
+
+	host arx-under-central-ncmm {
+		hardware ethernet 00:06:8e:30:37:4e;
+		fixed-address 192.168.8.112;
+	}
+
+	host arx-under-central-biotek {
+		hardware ethernet 00:06:8e:30:37:4b;
+		fixed-address 192.168.8.113;
+	}
+
+	host icyclerpc {
+		hardware ethernet 00:11:43:07:dc:4f;
+		fixed-address 192.168.8.115;
+	}
+
+	host biorad {
+		hardware ethernet 00:14:22:36:70:0d;
+		fixed-address 192.168.8.116;
+	}
+
+	host rt-pcr { #lab pc for kimlan
+		hardware ethernet 00:10:18:5A:27:45;
+		fixed-address 192.168.8.118;
+	}
+
+	host david-xp1 { # David reserved XP machine 1 as back up for lab use
+		hardware ethernet 00:19:b9:11:d0:4a;
+		fixed-address 192.168.8.119;
+	}
+
+	host maxquantpclopez { # RT 2538196
+		hardware ethernet 48:4D:7E:F4:2D:CD;
+		fixed-address 192.168.8.120;
+	}
+
+	host kjetil-new-mac {
+		hardware ethernet a8:20:66:1d:66:7e;
+		fixed-address 192.168.8.121;
+	}
+
+	host inthfaistos {
+		hardware ethernet 52:54:00:5B:10:6D;
+		fixed-address 192.168.8.122;
+	}
+
+	host arranz-52119-lorena { # RT 2564749
+		hardware ethernet 48:4D:7E:C2:B2:BB;
+		fixed-address 192.168.8.124;
+	}
+
+	host idrac-frigg { # the internal interface for new file system server
+		hardware ethernet 5C:F9:DD:F8:F5:20;
+		fixed-address 192.168.8.125;
+	}
+
+	host intfrigg { # frigg internal
+		hardware ethernet c8:1f:66:e6:8f:db;
+		fixed-address 192.168.8.126;
+	}
+
+	host intathena {
+		hardware ethernet 52:54:00:b9:73:b7;
+		fixed-address 192.168.8.128;
+	}
+
+	host synergyneo2 { # Johannes and Paul R. Berg RT 2339693
+		hardware ethernet f4:4d:30:03:77:17;
+		fixed-address 192.168.8.129;
+	}
+
+	host facscanto1 {
+		hardware ethernet 00:1a:4b:b3:d2:d7;
+		fixed-address 192.168.8.130;
+	}
+
+	host facsaria1 {
+		hardware ethernet 00:10:18:60:62:FA;
+		fixed-address 192.168.8.131;
+	}
+
+	host fenris { # internal int for RHEL 6 workstation ncmmlin215 Morth Group
+		hardware ethernet 00:0A:F7:2C:18:FB;
+		fixed-address 192.168.8.132;
+	}
+
+	host biochemical { # bio chemical lab pc for Anne Jorun
+		hardware ethernet F8:B1:56:A6:27:94;
+		fixed-address 192.168.8.133;
+	}
+
+	host georged820 {
+		next-server 192.168.8.3;
+		hardware ethernet D4:BE:D9:01:04:EB;
+		fixed-address 192.168.8.135;
+	}
+
+	host confocal1 {
+		hardware ethernet 00:19:99:E2:37:32;
+		fixed-address 192.168.8.136;
+	}
+
+	host confocal2 {
+		hardware ethernet 00:E0:81:54:A7:62;
+		fixed-address 192.168.8.137;
+	}
+
+	host eggtransfer {
+		#Camila EGG TRANSFER ROOM
+		hardware ethernet 94:57:A5:ED:65:1D;
+		fixed-address 192.168.8.138;
+	}
+
+	host intbiotekpc24 {
+		hardware ethernet 00:1B:11:B4:16:A0;
+		fixed-address 192.168.8.139;
+	}
+
+	host electrophysiologypc {# Esguerra group PC 3rd floor 
+		hardware ethernet 34:17:EB:D5:94:96;
+		fixed-address 192.168.8.140;
+	}
+
+	host multipep1 {
+		hardware ethernet 00:08:74:EA:D1:50;
+		fixed-address 192.168.8.141;
+	}
+
+	host multipep2 {
+		hardware ethernet 00:15:C5:BC:74:2D;
+		fixed-address 192.168.8.142;
+	}
+
+	#host unichromat {
+	#	hardware ethernet 00:13:21:67:5C:A3;
+	#	fixed-address 192.168.8.143;
+	#}
+
+	host intbiotekpc29 {
+		hardware ethernet 00:1B:21:05:22:8B;
+		fixed-address 192.168.8.144;
+	}
+
+	#host hts1 { #change Mac address, RT 1854797
+	#	hardware ethernet 00:50:B6:15:D6:26;
+	#	fixed-address 192.168.8.146;
+	#}
+
+	host hts2 {
+		hardware ethernet 00:14:22:49:9B:A0;
+		fixed-address 192.168.8.147;
+	}
+
+	host htsrobot {
+		hardware ethernet 00:1D:09:33:38:5D;
+		fixed-address 192.168.8.148;
+	}
+
+	host facscalibur1 {
+		hardware ethernet 00:14:51:23:85:E8;
+		fixed-address 192.168.8.150;
+	}
+
+	host kjetil-mac-2016 { # New Mac bought for Kjetil in 2016, October, RT 2313526
+		hardware ethernet a8:20:66:02:95:f5;
+		fixed-address 192.168.8.151;
+	}
+
+	host olympuscellimaging {
+		hardware ethernet 00:19:99:0B:33:E1;
+		fixed-address 192.168.8.152;
+	}
+
+	host  biotekpc65-l {
+		hardware ethernet 00:0D:60:89:C5:C3;
+		fixed-address 192.168.8.153;
+	}
+
+	host kjetil-mac-2016-2 { # Kjetil wants two interfaces in the room
+		hardware ethernet ac:87:a3:02:1b:9b;
+		fixed-address 192.168.8.155;
+	}
+
+	host vast-bio-imaging { # New instrument PC in Camila's group, ticket #1983146
+		hardware ethernet ec:b1:d7:5f:1d:0b;
+		fixed-address 192.168.8.157;
+	}
+
+	host esguerranikonpc {# esguerra group 3rd floor former confocal3
+		hardware ethernet 00:1e:0b:80:c8:f5;
+		fixed-address 192.168.8.158;
+	}
+
+	host fellese6400 {
+		hardware ethernet 00:24:e8:d5:fe:c0;
+		fixed-address 192.168.8.159;
+	}
+
+	host olympuscellimaging2 {
+		hardware ethernet 00:18:8b:19:e4:f6;
+		fixed-address 192.168.8.160;
+	}
+
+	host hts3 {
+		hardware ethernet 00:24:e8:37:32:c6;
+		fixed-address 192.168.8.162;
+	}
+
+	host slartibartfast2 { # George's Dell E6540
+		hardware ethernet 34:e6:d7:08:09:C4;
+		fixed-address 192.168.8.164;
+	}
+
+	host facsarea { # 6th floor
+		hardware ethernet 00:13:21:c7:e0:7a;
+		fixed-address 192.168.8.165;
+	}
+
+	host biotekpc177 { # Felles E6400
+		hardware ethernet 00:21:70:D5:79:6C;
+		fixed-address 192.168.8.166;
+	}
+
+	host ktaskenmac {
+		hardware ethernet c4:2c:03:33:9a:58;
+		fixed-address 192.168.8.167;
+	}
+
+	host ettorelablaptop { # HP Elitebook 840 laptop connected to a camera
+		hardware ethernet 30:e1:71:7a:ac:b8;
+		fixed-address 192.168.8.169;
+	}
+
+	host macwirelessncmm {
+		hardware ethernet 78:ca:39:ae:ca:cd;
+		fixed-address 192.168.8.170;
+	}
+
+	host georgemacbook {
+		hardware ethernet c4:2c:03:37:de:a6;
+		fixed-address 192.168.8.171;
+	}
+
+	host fellesitlaptop {# Its the biotekpc135-l
+		hardware ethernet d4:be:d9:01:04:e9;
+		fixed-address 192.168.8.172;
+	}
+
+	host dooraccesspc {
+		hardware ethernet 00:1a:a0:c0:e9:bd;
+		fixed-address 192.168.8.173;
+	}
+
+	host newconfocalzeiss {	# New PC for the confocal machine, see ticket number 2220875,by Gang on 26.07.2016
+		hardware ethernet 90:1B:0E:8F:67:45;
+		fixed-address 192.168.8.174;
+	}
+
+	host factionator {
+		hardware ethernet 00:30:d3:19:2d:4e;
+		fixed-address 192.168.8.175;
+	}
+
+	host biacore200-pc { # lab PC Tasken Group 3rd Floor; old MAC bc:30:5b:98:d7:20
+		hardware ethernet 18:66:da:06:aa:a8;
+		fixed-address 192.168.8.176;
+	}
+
+	host viewpointpc { # lab  PC in Camila's group, ticket #2049519
+		hardware ethernet 34:17:eb:d3:02:c8;
+		fixed-address 192.168.8.177;
+	}
+
+	host stereoscopepc { # lab PC in the room besides the confocal room
+		hardware ethernet 00:13:72:95:46:3a;
+		fixed-address 192.168.8.178;
+	}
+
+	host iquescreener { # Johannes and P. R. Berg RT 2339693
+		hardware ethernet 18:66:da:1a:75:c3;
+		fixed-address 192.168.8.180;
+	}
+
+	host facscanto-newpc { # Replaces facscanto1
+		hardware ethernet 00:1b:21:94:1b:1b;
+		fixed-address 192.168.8.182;
+	}
+
+	host prebenmacbook { # Preben Morth's laptop
+		hardware ethernet c8:2a:14:4d:0a:2f;
+		fixed-address 192.168.8.183;
+	}
+
+	host new-confocalpc { # Analysis PC connected to Confocal PC
+		hardware ethernet 78:2b:cb:a8:b5:63;
+		fixed-address 192.168.8.184;
+	}
+
+	host hamiltonpc { # To be used by Inderjit
+		hardware ethernet 00:14:22:3f:5e:f8;
+		fixed-address 192.168.8.186;
+	}
+
+	#host aktapc { # New PC, to be used in ncmm lab by kim
+	#	hardware ethernet 3C:D9:2B:67:AC:01;
+	#	fixed-address 192.168.8.187;
+	#}
+
+	host sn5064 { # New Compucyte instrument NCMM lab 
+		hardware ethernet 00:1C:C0:94:A8:92;
+		fixed-address 192.168.8.188;
+	}
+
+	host morthlab-mini { # Dell mini laptop NCMM lab 
+		hardware ethernet 00:50:B6:08:DA:E7;
+		fixed-address 192.168.8.189;
+	}
+
+	host hp-z210-workstation { # HP Z210 workstation in biotek lab 
+		hardware ethernet 00:1B:21:C0:77:79;
+		fixed-address 192.168.8.190;
+	}
+
+	host xerox-colorqube8570n { # xerox printer besides HP Z210 workstation in biotek lab 
+		hardware ethernet 00:00:AA:F4:F3:51;
+		fixed-address 192.168.8.191;
+	}
+
+	host xerox-printer-6200n { # xerox-printer-phaser 6200n  in the lab 
+		hardware ethernet 00:00:aa:86:03:b7;
+		fixed-address 192.168.8.193;
+	}
+
+	host sn5064b {	# Pair workstation to the sn5064 research imaging 
+					# located behind the NCMM desk space of Morten Luhr
+		hardware ethernet 00:1C:C0:94:EC:7A;
+		fixed-address 192.168.8.194;
+	}
+
+	#host imagin-room-typhoon1 { # lab pc in imagin room  
+	#	hardware ethernet 00:0F:1F:E0:28:73;
+	#	fixed-address 192.168.8.195;
+	#}
+
+	host bioplexPC { # lab pc in imagin room 
+		hardware ethernet 00:11:43:C0:00:09;
+		fixed-address 192.168.8.196;
+	}
+
+	host hu { # Dell Workstation Ubuntu
+		hardware ethernet D4:BE:D9:A6:15:B3;
+		fixed-address 192.168.8.197;
+	}
+
+	host zeissew { #Zeiss EW Microscope Workstation
+		hardware ethernet 98:90:96:B0:CE:0E;
+		fixed-address 192.168.8.198;
+	}
+
+	host multipep3 {
+		hardware ethernet b4:b5:2f:de:0a:58;
+		fixed-address 192.168.8.200;
+	}
+
+	host intymer { #intymer is Preben Morth T3500 repaired 07/11/2014
+		hardware ethernet 00:10:18:77:66:16;
+		fixed-address 192.168.8.203;
+	}
+
+	host privatlaptoper { # For Windows OS authentication of private laptops
+		hardware ethernet 28:d2:44:3c:af:1e;
+		fixed-address 192.168.8.204;
+	}
+
+	#host xtal { # Old HPLC PC now connected to a microscope
+	#	hardware ethernet d4:85:64:b3:cd:81;
+	#	fixed-address 192.168.8.206;
+	#}
+
+	host cellobs { # Latitude E6410
+		hardware ethernet D8:9D:67:F3:75:B6;
+		fixed-address 192.168.8.207;
+	}
+
+	host liquidhandler { # lab PC NCMM
+		hardware ethernet bc:30:5b:9a:e6:26;
+		fixed-address 192.168.8.208;
+	}
+
+	host preben-coldroom { # Laptop in the Cold Room for Preben
+		hardware ethernet 00:50:b6:08:da:e7;
+		fixed-address 192.168.8.209;
+	}
+
+	host agilient { # New HPLC PC replacing the old one for Preben
+		hardware ethernet 78:2b:cb:a9:fc:3f;
+		fixed-address 192.168.8.210;
+	}
+
+	host IncuCytePC { 	# Lab PC from Essen old MAC 00:25:90:09:ec:d4
+						# Second replacement RT 1853344 MAC 00:25:90:67:45:5A
+		hardware ethernet 0C:C4:7A:14:91:2A;
+		fixed-address 192.168.8.211;
+	}
+
+	host intbiotin { # R815 Linux server
+		hardware ethernet 14:FE:B5:C8:11:A7;
+		fixed-address 192.168.8.212;
+	}
+
+	host oldincucyte { # see ticket 1788337, done by GangCheng on 16.04.2015
+		hardware ethernet 00:25:90:95:13:B8;
+		fixed-address 192.168.8.213;
+	}
+
+	host intbiolp1 {
+		hardware ethernet 00:00:AA:A1:F7:74;
+		fixed-address 192.168.8.241;
+	}
+
+	host intbiolp2 {
+		hardware ethernet 00:00:AA:90:2C:EB;
+		fixed-address 192.168.8.242;
+	}
+
+	host timemachine-server { # put felles macbook to internal network for testing
+		hardware ethernet 00:1c:42:8f:a5:21;
+		fixed-address 192.168.8.243;
+	}
+
+}
