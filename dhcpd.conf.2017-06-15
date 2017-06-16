@@ -472,6 +472,12 @@ subnet 192.168.8.0 netmask 255.255.255.0 {
 		fixed-address 192.168.8.167;
 	}
 
+	host intbiotekpc166-l { # felles laptop for test internal network
+		hardware ethernet 18:db:f2:33:a1:85;
+		fixed-address 192.168.8.168;
+	}
+
+
 	host ettorelablaptop { # HP Elitebook 840 laptop connected to a camera
 		hardware ethernet 30:e1:71:7a:ac:b8;
 		fixed-address 192.168.8.169;
@@ -607,6 +613,12 @@ subnet 192.168.8.0 netmask 255.255.255.0 {
 		hardware ethernet b4:b5:2f:de:0a:58;
 		fixed-address 192.168.8.200;
 	}
+
+	#host ncmm-platereader { # NCMM lab machine. Optiplex 780
+	#	hardware ethernet b8:ac:6f:32:d6:08;
+	#	fixed-address 192.168.8.202;
+	#}
+
 
 	host intymer { #intymer is Preben Morth T3500 repaired 07/11/2014
 		hardware ethernet 00:10:18:77:66:16;

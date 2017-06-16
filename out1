@@ -1,0 +1,132 @@
+	host 4jane { # RT 2508841
+	host agilent-PC-sekulic { # lap pc, see rt 2446915
+	host agilient { # New HPLC PC replacing the old one for Preben
+	#host aktapc { # New PC, to be used in ncmm lab by kim
+	host aktasekulic {
+	host arranz-52119-lorena { # RT 2564749
+	host arxcarlos {
+	host arxcontrol {
+	host arx-under-central-biotek {
+	host arx-under-central-ncmm {
+	host BDLSR-PC { # computer connected to BD LSRFortessa instrument, 3rd floor, in charge by Johannes 
+	host biacore200-pc { # lab PC Tasken Group 3rd Floor; old MAC bc:30:5b:98:d7:20
+	host bioanalyzerpc { # lab PC for NCMM Judith Bioanalayzer equipment
+	host biochemical { # bio chemical lab pc for Anne Jorun
+	host bioplexPC { # lab pc in imagin room 
+	host bioplexpcnew {
+	host biorad {
+	host biorad52161 { # xp machine in the lab room 52161 
+	host biotekpc177 { # Felles E6400
+	host  biotekpc65-l {
+	host carlospc { # Carlos desktop in internal network to access arx control vm
+	host cellobs { # Latitude E6410
+	host centos7 { # George test VM pool at mencius
+	host chembio2 { # second chembio pc for Anne Jorun
+	host chemicalwastepc { # PC for Liv - Ola - Eshrat in the former Berndt Theide lab 2nd floor
+	host cn2 {
+	host confocal1 {
+	host confocal2 {
+	host Dario-PC { # workstation for Dario,rt 2403975
+	host david-xp1 { # David reserved XP machine 1 as back up for lab use
+	host dooraccesspc {
+	host dymolabelpc { # lab PC for Eshrats Dymo equipment
+	host eggtransfer {
+	host electrophysiologypc {# Esguerra group PC 3rd floor 
+	host envision-PC { # lap pc, see RT2438074
+	host esguerranikonpc {# esguerra group 3rd floor former confocal3
+	host ettorelablaptop { # HP Elitebook 840 laptop connected to a camera
+	host facsarea { # 6th floor
+	host facsaria1 {
+	host facscalibur1 {
+	host facscanto1 {
+	host facscanto-newpc { # Replaces facscanto1
+	host factionator {
+	host fellese6400 {
+	host fellesitlaptop {# Its the biotekpc135-l
+	host FellesIT-new-MacbookPro { # Felles IT NCMM new MacBook Pro 13"
+	host fenris { # internal int for RHEL 6 workstation ncmmlin215 Morth Group
+	host georged820 {
+	host georgemacbook {
+	host hamiltonpc { # To be used by Inderjit
+	host hp-z210-workstation { # HP Z210 workstation in biotek lab 
+	#host hts1 { #change Mac address, RT 1854797
+	host hts2 {
+	host hts3 {
+	host hts4 { # Older PC davidlabpc - biotek28 will be a backup Mac = 00:1c:c4:65:52:09
+	host htsrobot {
+	host hu { # Dell Workstation Ubuntu
+	host icyclerpc {
+	host idrac-frigg { # the internal interface for new file system server
+	host idractest {
+	#host imagin-room-typhoon1 { # lab pc in imagin room  
+	host IncuCytePC { 	# Lab PC from Essen old MAC 00:25:90:09:ec:d4
+	host intathena {
+	host intbiolp1 {
+	host intbiolp2 {
+	host intbiotekpc24 {
+	host intbiotekpc29 {
+	host intbiotekswitch1 {
+	host intbiotekswitch2 {
+	host intbiotekswitch3 {
+	host intbiotin { # R815 Linux server
+	host intbiotroll {
+	host intbioweb {
+	host intcnkeeper {
+	host intfrigg { # frigg internal
+	host inthfaistos {
+	host intncmmbook190.internal.biotek { # put felles macbook to internal network for testing
+	host intperun {
+	host intymer { #intymer is Preben Morth T3500 repaired 07/11/2014
+	host iQuePC { # PC to be used with the iQue software - Chemical platform - Johannes
+	host iquescreener { # Johannes and P. R. Berg RT 2339693
+	host irepworkstation { # irep workstation in the internal network
+	host kim-lab-pc { # win7 32 in the ncmm new cool room
+	host kjetil-mac-2016-2 { # Kjetil wants two interfaces in the room
+	host kjetil-mac-2016 { # New Mac bought for Kjetil in 2016, October, RT 2313526
+	host kjetil-new-mac {
+	host ktaskenmac {
+	host lab-printer { # HP 551dn Color Prionter in the lab 2nd floor
+	host liquidhandler { # lab PC NCMM
+	host macbookmel {
+	host macwirelessncmm {
+	host mathelx201 {
+	host maxquantpclopez { # RT 2538196
+	host microinjenctionPC {
+	host morthlab-mini { # Dell mini laptop NCMM lab 
+	host multipep1 {
+	host multipep2 {
+	host multipep3 {
+	host ncmmlap127-l { # NCMM HP laptop - to borrow
+	host ncmmlap240-l { # RT 2571890
+	host newbiorad.internal.biotek { # RT 
+	host new-confocalpc { # Analysis PC connected to Confocal PC
+	host newconfocalzeiss {	# New PC for the confocal machine, see ticket number 2220875,by Gang on 26.07.2016
+	host oldincucyte { # see ticket 1788337, done by GangCheng on 16.04.2015
+	host olympuscellimaging {
+	host olympuscellimaging2 {
+	host preben-coldroom { # Laptop in the Cold Room for Preben
+	host prebenmacbook { # Preben Morth's laptop
+	host privatlaptoper { # For Windows OS authentication of private laptops
+	host proxmox1 { # proxmox virtual platform by Gang
+	host rt-pcr { #lab pc for kimlan
+	host server1 { # George test VM pool at mencius
+	host server2 { # George test VM pool at mencius
+	host singer { # Sandra Lopez Avilles Lab 4th Floor
+	host slartibartfast2 { # George's Dell E6540
+	host sn5064b {	# Pair workstation to the sn5064 research imaging 
+	host sn5064 { # New Compucyte instrument NCMM lab 
+	host stereoscopepc { # lab PC in the room besides the confocal room
+	host sunzi { # test ubuntu machine by Gang 
+	host synergyneo2 { # Johannes and Paul R. Berg RT 2339693
+	host TestLaptop { # Testlatop
+	host testpc { # replacing nilsenlabpc connected to internal netwok printer
+	host testsekulic {
+	host timemachine-server { # put felles macbook to internal network for testing
+	#host unichromat {
+	host vast-bio-imaging { # New instrument PC in Camila's group, ticket #1983146
+	host viewpointpc { # lab  PC in Camila's group, ticket #2049519
+	host xerox-colorqube8570n { # xerox printer besides HP Z210 workstation in biotek lab 
+	host xerox-printer-6200n { # xerox-printer-phaser 6200n  in the lab 
+	#host xtal { # Old HPLC PC now connected to a microscope
+	host zeissew { #Zeiss EW Microscope Workstation
+	host ztr2 {
